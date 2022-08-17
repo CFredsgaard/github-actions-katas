@@ -1,13 +1,20 @@
 name: JAVA CI
-on: push
+on: 
+  push: 
+    branches:
+      - main
+  pull_request:
+    branches: 
+      - main
 env: 
   docker_username: ${{secrets.DOCKER_USERNAME}}
   docker_password: ${{secrets.DOCKER_PASSWORD}}
   GIT_COMMIT: ${{github.sha}}
 
 jobs:
+
   Clone-down:
-    name: Clone down repo
+    name: Clone repo
     runs-on: ubuntu-latest
     container: gradle:6-jdk11
     steps: 
