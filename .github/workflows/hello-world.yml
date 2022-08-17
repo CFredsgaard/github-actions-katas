@@ -14,7 +14,7 @@ env:
 jobs:
 
   Clone-down:
-    name: Clone down repo
+    name: Clone repo
     runs-on: ubuntu-latest
     container: gradle:6-jdk11
     steps: 
