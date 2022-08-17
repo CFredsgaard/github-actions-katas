@@ -42,7 +42,7 @@ jobs:
       - name: Upload JAR 
         uses: actions/upload-artifact@v2
         with: 
-          name: JAR
+          name: code
           path: app/build/libs/app-0.1-all.jar 
 
   Docker-image:
@@ -52,7 +52,7 @@ jobs:
       - name: Download Build 
         uses: actions/download-artifact@v2
           with: 
-            name: JAR
+            name: code
             path: .
       - name: Build docker
         run: chmod +x ci/build-docker.sh && ci/build-docker.sh
