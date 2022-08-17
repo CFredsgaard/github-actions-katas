@@ -40,7 +40,7 @@ jobs:
       - name: Upload JAR 
         uses: actions/upload-artifact@v2
         with: 
-          name: code
+          name: jar
           path: app/build/libs/app-0.1-all.jar 
 
   Docker-image:
