@@ -26,7 +26,7 @@ jobs:
       - name: Build with Gradle
         run: chmod +x ci/build-app.sh && ci/build-app.sh
       - name: Test with Gradle
-        run: ci/unit-test-app.sh
+        run: chmod +x ci/unit-test-app.sh && ci/unit-test-app.sh
       - name: Upload repo
         uses: actions/upload-artifact@v2
         with: 
